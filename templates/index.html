@@ -1,0 +1,26 @@
+<html lang="ru">
+<body>
+<h1>Объявления:</h1>
+{% if username %}
+    <h2>{{ username }}</h2>
+    <p>
+    <ul>
+        <li><a href="/logout">logout</a></li>
+    </ul>
+    </p>
+{% else %}
+    <h2>You not logged!</h2>
+    <p>
+    <ul>
+        <li><a href="/login">login</a></li>
+    </ul>
+    </p>
+
+{% endif %}
+
+<p>
+    <a href="/ad">Объявления</a>
+</p>
+
+</body>
+</html>

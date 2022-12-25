@@ -1,0 +1,15 @@
+<html lang="ru">
+<body>
+<h1>Объявления</h1>
+
+<p>Создать <a href="/ad/create">новое</a> | <a href="/">главная</a></p>
+<hr>
+{% for ad in ads %}
+<p>{{ ad }}</p>
+<p>Автор: <b>{{ ad.created_by }}</b> / Создано: {{ ad.created_at }} / Изменено: {{ ad.updated_at }}</p>
+<p>Сообщение: {{ ad.body }}</p>
+<p><a href="/ad/{{ ad.pk }}/edit">Изменить</a> <a href="/ad/{{ ad.pk }}/delete">Удалить</a></p>
+<hr>
+{% endfor %}
+</body>
+</html>
